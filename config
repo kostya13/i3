@@ -146,13 +146,9 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+#        status_command i3status
+		status_command i3blocks -c /home/kostya/.i3/i3blocks.conf
 }
-
-exec setxkbmap -layout us,ru -option grp:caps_toggle
-bindsym $mod+Tab  workspace next
-bindsym $mod+Shift+Tab  workspace prev
-bindsym $mod+S exec quickswitch
 
 
 # class                 border  backgr. text    indicator
@@ -162,4 +158,10 @@ client.unfocused        #000000 #001500 #00FF00 #FF0000
 
 
 #new_window pixel 3
+exec setxkbmap -layout us,ru -option grp:caps_toggle
+
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
+bindsym $mod+Tab  workspace next
+bindsym $mod+Shift+Tab  workspace prev
+bindsym $mod+s exec quickswitch
+bindsym $mod+q exec xfce4-appfinder

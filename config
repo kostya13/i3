@@ -163,5 +163,7 @@ exec setxkbmap -layout us,ru -option grp:caps_toggle
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 bindsym $mod+Tab  workspace next
 bindsym $mod+Shift+Tab  workspace prev
-bindsym $mod+s exec quickswitch
+# Install depondensies for quickswitch: sudo pip3 install i3-py
+bindsym $mod+s exec /home/kostya/.i3/quickswitch.py
 bindsym $mod+q exec xfce4-appfinder
+bindsym Control+Escape exec sudo chvt 3

@@ -147,6 +147,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 #        status_command i3status
+		#status_command i3blocks 
 		status_command i3blocks -c /home/kostya/.i3/i3blocks.conf
 }
 
@@ -159,6 +160,7 @@ client.unfocused        #000000 #001500 #00FF00 #FF0000
 
 #new_window pixel 3
 exec setxkbmap -layout us,ru -option grp:caps_toggle
+exec fbxkb
 
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 bindsym $mod+Tab  workspace next
